@@ -13,3 +13,18 @@
 // for help visit this link http://guides.beanstalkapp.com/version-control/common-git-commands.html
 
 // https://git-scm.com/download/win
+
+// FORM VLAIDATION
+
+function checkForLastName () {
+  const lastNameEle = document.getElementById("lastNameField");
+  if (lastNameEle.value.length === 0) {
+    lastNameEle.focus();
+    lastNameEle.style.backgroundColor = "yellow";
+    const errorContainer = document.getElementById("showError");
+    errorContainer.innerText = "Please Enter your user name";
+    errorContainer.style.color = "red";
+    errorContainer.style.display = "block";
+    return false;
+  }
+}
